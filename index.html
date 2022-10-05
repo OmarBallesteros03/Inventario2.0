@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de productos</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="inventario.js"></script>
+</head>
+    <header>
+        <h1>CONTROL DE INVENTARIO</h1> 
+    </header>
+<body>
+
+<div id="app">
+    <form>
+        <label for="pName">
+            Nombre del producto: <input type="text" id="pName"><br><br>
+        </label><br>
+        <label for="pCode">
+            Código: <input type="text" id="pCode"><br><br>
+        </label><br>
+        <label for="pAmount">
+            Cantidad: <input type="text" id="pAmount"><br><br>
+        </label><br>
+        <label for="pCost">
+            Costo: <input type="text" id="pCost"><br><br>
+        </label><br>
+
+        <button type="button" class="btn btn-dark" id="guardar">Guardar</button>
+        <button type="button" class="btn btn-dark" id="eliminar">Eliminar</button>
+        <button type="button" class="btn btn-dark" id="buscar">Buscar</button>
+        <button type="button" class="btn btn-dark" id="listar">Listar</button>
+        <button type="button" class="btn btn-dark" id="listarInverso">Listado inverso</button>
+    </form>
+</div>
+<div id="detalles"></div>
+<script src= "./app.js" ></script>
+</body>
+</html>
