@@ -13,29 +13,40 @@
     </header>
 <body>
 
-<div id="app">
-    <form>
-        <label for="pName">
-            Nombre del producto: <input type="text" id="pName"><br><br>
-        </label><br>
-        <label for="pCode">
-            Código: <input type="text" id="pCode"><br><br>
-        </label><br>
-        <label for="pAmount">
-            Cantidad: <input type="text" id="pAmount"><br><br>
-        </label><br>
-        <label for="pCost">
-            Costo: <input type="text" id="pCost"><br><br>
-        </label><br>
+    <div id="agregar">
+        <h2>Agregar producto</h2>
+        <form id="formulario_Agregar">
+            <input type="number" id="codigo" placeholder="Código del producto">
+            <input type="text" id="nombre" placeholder="Nombre del producto">
+            <input type="number" id="cantidad" placeholder="Cantidad del producto">
+            <input type="number"id="costo" placeholder="Costo del producto"><br><br>
+            <input type="submit" value= "Agregar" id="btnAgregar">
+        </form>
+    </div>
 
-        <button type="button" class="btn btn-dark" id="guardar">Guardar</button>
-        <button type="button" class="btn btn-dark" id="eliminar">Eliminar</button>
-        <button type="button" class="btn btn-dark" id="buscar">Buscar</button>
-        <button type="button" class="btn btn-dark" id="listar">Listar</button>
-        <button type="button" class="btn btn-dark" id="listarInverso">Listado inverso</button>
-    </form>
+    <div id="busqueda">
+        <h2>Búsqueda</h2>
+        <form id="formulario_Busqueda">
+            <input type="number" id="busCodigo" placeholder="Código del producto"> <br><br>
+            <input type="button" value= "Buscar" id="btnBuscar">
+            <input type="button" value= "Listar" id="btnListar">
+            <input type="button" value= "ListarInverso" id="btnListarInverso">
+        </form>
+    </div>
+    <div id="eliminar">
+        <h2>Eliminar</h2>
+        <form id="formulario_Eliminar">
+            <input type="number" id="delCodigo" placeholder="Código del producto"><br><br>
+            <input type="button" value= "Eliminar" id="btnEliminar"><br><br>
+        </form>
+    </div>   
 </div>
-<div id="detalles"></div>
-<script src= "./app.js" ></script>
+    <div>
+        <h1 id="text_listado">Listado de productos</h1>
+        <div id="listado">
+
+        </div>
+    </div>
 </body>
+<script src="./js/app.js"></script>
 </html>

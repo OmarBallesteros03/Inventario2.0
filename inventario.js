@@ -4,7 +4,7 @@ class Inventario{
     }
 
     agregarProducto(producto){
-        this.inventario.push(producto);
+        this.inventario[this.inventario.length] = producto;
     }
 
     eliminarProducto(code){
@@ -25,15 +25,27 @@ class Inventario{
     }
 
     buscar(code){
-        for(let i = 0; i < this.inventario.length; i++){
-            if(code === this.inventario[i].getCode){
-                return this.inventario[i];
-            } 
+            let inicio = 0;
+            let fin = this.inventario.length-1;
+            let buscado;
+            let encontrado = false;
+            let mitad;
+         
+            while (encontrado === false && inicio <= fin) {
+                mitad = Math.floor((incio + fin)/2);
+                if (this.inventario[mitad] == code) {
+                    encontrado = true;
+                    buscado = this.inventario[mitad];
+                } else if (this.inventario[mitad] > code) {
+                    fin = mitad - 1;
+                } else {
+                    incio = mitad + 1;
+                }
+            }
+            return buscado;
         }
-        return null; 
-    }
 
-    listado(){
+    listar(){
         let lista = "";
         for(let i = 0; i = this.inventario.length-1; i++){
             lista += this.inventario[i].info();
