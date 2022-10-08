@@ -9,7 +9,8 @@ agregar.addEventListener('click',(e)=>{
 
     const producto = new Producto(nombre, codigo, cantidad, costo);
     miInv.agregarProducto(producto);
-    document.getElementById("listado").innerHTML=`<p>El producto fue agregado correctamente.</p>`
+    document.getElementById("listado").innerHTML="<p>El producto fue agregado correctamente.</p>"
+    e.preventDefault()
 })
 
 const eliminar=document.getElementById("btnEliminar");

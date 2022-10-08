@@ -4,8 +4,18 @@ class Inventario{
     }
 
     agregarProducto(producto){
-        this.inventario[this.inventario.length] = producto;
-    }
+        if(this.inventario.length==0){
+            this.inventario[this.inventario.length] = producto;
+        } else {
+                while (this.inventario[i]!=null && producto.getCode < this.inventario[i-1].getCode){
+                    producto = this.inventario[this.inventario.length-1];
+                    for(i=this.inventario.length-1; i >=1; i--){
+                    this.inventario[i]=this.inventario[i-1];
+                }
+            this.inventario[0] = x;
+                }
+            }
+        }
 
     eliminarProducto(code){
         for(let i = 0; i < this.inventario.length;i++){
@@ -15,8 +25,7 @@ class Inventario{
                 {
                     producto[j] = producto[j+1];
                 }
-            this.inventario.pop();
-            alert("Producto eliminado"); 
+            this.inventario.pop(); 
             } else{
                 return null;
             }
